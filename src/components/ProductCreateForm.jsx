@@ -4,7 +4,7 @@ function ProductCreateForm() {
   let [errors, setErrors] = useState(null);
   let [success, setSuccess] = useState(false);
 
-  let [brand, setBrand] = useState([
+  let [brands, setBrands] = useState([
     {
       _id: 1,
       name: "Fiat",
@@ -116,7 +116,7 @@ function ProductCreateForm() {
           <label htmlFor="">Marca</label>
           <select name="brand" value={data.brand} onInput={handleInput}>
             <option value=""></option>
-            {brand.map((brand) => {
+            {brands.map((brand) => {
               return <option value={brand._id}>{brand.name}</option>;
             })}
           </select>
