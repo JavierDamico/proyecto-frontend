@@ -5,11 +5,16 @@ import LoginForm from "./components/LoginForm";
 import Home from "./components/Home";
 import CreateProfile from "./components/CreateProfile";
 import CategoryForm from "./components/CategoryForm";
+import ChatForm from "./components/ChatForm"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <Router>
       <Switch>
+        <Route path="/chat">
+          <ChatForm />
+        </Route>
         <Route path="/products/create">
           <ProductCreateForm />
         </Route>

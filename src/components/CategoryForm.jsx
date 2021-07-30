@@ -59,7 +59,10 @@ function CategoryForm() {
         <label htmlFor="name">Nombre</label>
         <input type="text" name="name" value={data.name} onInput={handleInput} />
         <div>{errors.message?.name.msg}</div>
-        {/* el ? es solo para react, es como un if si message existe continua */}
+        {/* el ? es solo para react, es como un if si message existe continua
+          para hacerlo de la forma tradicional tendria que hacer esto:
+          {errors.message ? <div>{errors.message.name.msg}</div> : ''}
+        */}
 
         <div>
           <button>Enviar</button>
